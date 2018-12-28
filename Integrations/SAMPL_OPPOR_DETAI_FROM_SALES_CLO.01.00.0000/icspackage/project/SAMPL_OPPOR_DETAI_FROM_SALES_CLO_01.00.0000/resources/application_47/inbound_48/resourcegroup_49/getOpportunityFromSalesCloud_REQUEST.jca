@@ -1,0 +1,25 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/osc/getOpportunityFromSalesCloud_REQUEST/types" name="getOpportunityFromSalesCloud_REQUESTPortType" adapter="osc" wsdlLocation="getOpportunityFromSalesCloud_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.fa.FAConnectionFactory">
+      <property name="endpointType" value="SOAP"/>
+      <property name="cloud.adapter.sdk.version" value="17.2.3"/>
+      <property name="targetWSDLURL" value="%%SAMPLE_SALES_CLOUD_targetWSDLURL"/>
+      <property name="csfkey" value="8e8ad3bb6414d9d33784410fab4d4ff3f5bd36ae20b9423be2cea15916005c5b"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="cloud.adapter.plugin.version" value="17.2.3"/>
+      <property name="serviceWSDLURL" value="%%SAMPLE_SALES_CLOUD_serviceWSDLURL"/>
+      <property name="applicationVersion" value="1.0"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="getOpportunityFromSalesCloud_REQUESTPortType" operation="getOpportunity">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="getOpportunity"/>
+      <property name="operationPath" value="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getOpportunity"/>
+      <property name="referenceSourceSchemas" value="true"/>
+      <property name="faServiceQualifiedName" value="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}OpportunityService"/>
+      <property name="outboundRequestOperation" value="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}getOpportunity"/>
+      <property name="browseBySelection" value="browseByBusinessObject"/>
+      <property name="outboundRequestObject" value="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/OSCAdapter}Opportunity : OpportunityService"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

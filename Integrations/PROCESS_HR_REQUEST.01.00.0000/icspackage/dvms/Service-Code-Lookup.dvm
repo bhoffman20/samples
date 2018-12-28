@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><dvm xmlns="http://xmlns.oracle.com/dvm" name="Service-Code-Lookup">   <columns>      <column name="Domain_Name_1"/>      <column name="Domain_Name_2"/>   </columns>   <rows>      <row>         <cell>a</cell>         <cell>b</cell>      </row>      <row>         <cell>c</cell>         <cell>d</cell>      </row>   </rows></dvm>

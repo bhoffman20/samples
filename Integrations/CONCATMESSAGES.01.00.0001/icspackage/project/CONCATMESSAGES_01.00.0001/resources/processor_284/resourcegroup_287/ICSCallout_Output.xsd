@@ -1,0 +1,1 @@
+<?xml version = '1.0' encoding = 'UTF-8'?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ics="http://www.oracle.com/2014/03/ics/callout" targetNamespace="http://www.oracle.com/2014/03/ics/callout" elementFormDefault="qualified">   <element name="output_concatMsgCallout_returnMsg" type="string"/></schema>

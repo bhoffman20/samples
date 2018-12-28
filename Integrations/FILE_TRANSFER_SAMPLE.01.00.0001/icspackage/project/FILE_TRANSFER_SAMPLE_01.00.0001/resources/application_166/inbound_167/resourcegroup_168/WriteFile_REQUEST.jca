@@ -1,0 +1,40 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/ftp/WriteFile_REQUEST/types" name="WriteFile_REQUESTPortType" adapter="ftp" wsdlLocation="WriteFile_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="ics/FtpAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.tip.adapter.ftp.FTPManagedConnectionFactory">
+      <property name="DefaultDateFormat" value="MMM d yyyy"/>
+      <property name="csfkey" value="bc82830c15d31b19455b2cea9ed5fd020d145e718b700dd19e4d7ef155e9f31a"/>
+      <property name="PreferredCipherSuite" value="aes128-cbc"/>
+      <property name="KeystoreAlgorithm" value="SunX509"/>
+      <property name="KeystoreType" value="PKCS12"/>
+      <property name="KeepConnections" value="false"/>
+      <property name="SecurePort" value="990"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="ProxyType" value="http"/>
+      <property name="TransportProvider" value="http"/>
+      <property name="Port" value="%%SAMPLE_FTP_CONNECTION_Port"/>
+      <property name="RecentDateFormat" value="MMM d HH:mm"/>
+      <property name="MftOptimization" value="false"/>
+      <property name="SftpBlockSize" value="32768"/>
+      <property name="ListParserKey" value="UNIX"/>
+      <property name="Host" value="%%SAMPLE_FTP_CONNECTION_Host"/>
+      <property name="ProxyPort" value="80"/>
+      <property name="AuthenticationType" value="password"/>
+      <property name="UseProxy" value="true"/>
+      <property name="ProxyHost" value="www-proxy.us.oracle.com"/>
+      <property name="ChangeDirectory" value="true"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="WriteFile_REQUESTPortType" operation="WriteFile">
+    <interaction-spec className="oracle.tip.adapter.ftp.outbound.FTPInteractionSpec">
+      <property name="Append" value="false"/>
+      <property name="ICSFilePull" value="true"/>
+      <property name="IcsUiPluginMetadata" value="{&quot;SCHEMA_CONFIGURED&quot;:&quot;fileSchemaRequiredNo&quot;}"/>
+      <property name="Operation" value="WriteFile"/>
+      <property name="attachmentXpathInfo" value="//*[namespace-uri()='http://xmlns.oracle.com/cloud/adapter/ftp/WriteFile_REQUEST/types' and local-name()='WriteFile']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/file/v1/types' and local-name()='ICSFile']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/file/v1/types' and local-name()='FileReference']"/>
+      <property name="PhysicalDirectory" value="/upload"/>
+      <property name="FileType" value="ascii"/>
+      <property name="FileNamingConvention" value="1KB%yyMMddHHmmssSS%.zip"/>
+      <property name="UnwrapRootElement" value="true"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

@@ -1,0 +1,20 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/rightnow/getIncidentFromRightNow_REQUEST/types" name="getIncidentFromRightNow_REQUESTPortType" adapter="rightnow" wsdlLocation="getIncidentFromRightNow_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rightnow.RightNowConnectionFactory">
+      <property name="targetWSDLURL" value="%%SAMPLE_SERVICE_CLOUD_targetWSDLURL"/>
+      <property name="pluginVersion" value="17.1.1"/>
+      <property name="csfkey" value="e0f64f76052a9e6fe477637f208dff8ad5a8cf87d368841f22af1aa02e7e95a1"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="applicationVersion" value="1_3"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="getIncidentFromRightNow_REQUESTPortType" operation="Get">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="Get"/>
+      <property name="operationPath" value="Get"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="selectedPrimaryObjects" value="[Incident]"/>
+      <property name="generateInboundCredentials" value="true"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

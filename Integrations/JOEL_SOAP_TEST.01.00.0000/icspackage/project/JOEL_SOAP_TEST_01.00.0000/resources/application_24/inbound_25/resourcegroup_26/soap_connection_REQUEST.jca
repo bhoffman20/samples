@@ -1,0 +1,30 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/soap/soap_connection_REQUEST/types" name="DilbertSoap" adapter="soap" wsdlLocation="soap_connection_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.soap.SoapConnectionFactory">
+      <property name="managedSecurity" value="true"/>
+      <property name="endpointURL" value="http://www.gcomputer.net/webservices/dilbert.asmx"/>
+      <property name="targetWSDLURL" value="%%TEST_SOAP_CONNECTION_targetWSDLURL"/>
+      <property name="security" value="NONE"/>
+      <property name="applicationVersion" value="1_0"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="DilbertSoap" operation="TodaysDilbert">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="TodaysDilbert"/>
+      <property name="operationPath" value="http://gcomputer.net/webservices/TodaysDilbert"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="endpointWSDLURL" value="soap_connection_REQUEST.wsdl"/>
+      <property name="cacName" value="soap_connection_REQUEST"/>
+      <property name="inboundAsyncEnabled" value="false"/>
+      <property name="enableMTOMProcessing" value="false"/>
+      <property name="targetPort" value="DilbertSoap"/>
+      <property name="targetService" value="Dilbert"/>
+      <property name="targetInvocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="skipAttachmentProcessing" value="true"/>
+      <property name="activationRegenerateWSDL" value="true"/>
+      <property name="jcaTransportEnabled" value="true"/>
+      <property name="dynamicInvokeEnabled" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>
