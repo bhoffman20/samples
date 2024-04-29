@@ -1,0 +1,10 @@
+Total Number of suites(events): 9
+Total Test cases: 31
+Passed: 30
+Failures: 1
+Skipped: 0
+Test Suite: FDR_AP_Stage,
+  Test Case: Invoice Register, Status: Passed
+  Test Case: Invoice Register, Status: Passed
+  Test Case: Invoice Register, Status: Passed
+  
