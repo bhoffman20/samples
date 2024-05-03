@@ -43,8 +43,7 @@ function sleep(ms) {
 
 // Test Connection
 app.get('/api/now/ui/user/current_user', (request, response) => {
-    response.appendHeader('Content-Type', 'application/json')
-    response.status(200).send('{}');
+    response.status(200).contentType('application/json').send('{}');
 }); 
 
 // ServiceNow Request GET URL
@@ -70,18 +69,16 @@ app.get('/api/now/table/change_request', (request, response) => {
             approval: approvalStatus
         }
     }
-    response.appendHeader('Content-Type', 'application/json');
     
     if('NO-RESPONSE' != ticketNum) {
-        response.status(200).send(payload);
+        response.status(200).contentType('application/json').send(payload);
     }
 }); 
 
 // ServiceNow Request POST URL
 app.post('/api/now/table/change_request', (request, response) => {
     console.log(request.body);
-    response.appendHeader('Content-Type', 'application/json')
-    response.status(200).send('{}');
+    response.status(200).contentType('application/json').send('{}');
 });
 
 
