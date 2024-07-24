@@ -131,10 +131,10 @@ app.get('/api/v1/UserStories/', (request, response) => {
     
     if(null != where && where.match('\(Id eq .*\)')) {
         console.log("Where clause matched the regex");
-        ticketId = ticketId.replaceAll("(", "");
-        ticketId = ticketId.replaceAll(")", "");
-        ticketId = ticketId.replaceAll("Id eq ", "");
-        ticketId = ticketId.replaceAll("\"", "");
+        ticketId = ticketId.replace("(", "");
+        ticketId = ticketId.replace(")", "");
+        ticketId = ticketId.replace("Id eq ", "");
+        ticketId = ticketId.replace("\"", "");
         console.log("Looking for story: " + ticketId);
     } else {
         console.log("Where clause didn't match! " + where);
