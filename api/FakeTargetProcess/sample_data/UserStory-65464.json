@@ -1,0 +1,306 @@
+{
+    "Items": [
+        {
+            "ResourceType": "UserStory",
+            "Id": 65464,
+            "Name": "rrerwr",
+            "Description": "As a ...<br>I want to ...<br>So that ...<br>",
+            "StartDate": null,
+            "EndDate": null,
+            "CreateDate": "/Date(1712667920000-0400)/",
+            "ModifyDate": "/Date(1720202410000-0400)/",
+            "LastCommentDate": null,
+            "Tags": "",
+            "NumericPriority": 49266.0,
+            "EntityVersion": 23565997,
+            "EntityType": {
+                "ResourceType": "EntityType",
+                "Id": 4,
+                "Name": "UserStory"
+            },
+            "LastEditor": {
+                "ResourceType": "GeneralUser",
+                "Id": 2,
+                "FirstName": "Target",
+                "LastName": "Process",
+                "Login": "System",
+                "FullName": "Target Process"
+            },
+            "Owner": {
+                "ResourceType": "GeneralUser",
+                "Id": 542,
+                "FirstName": "Palmer,",
+                "LastName": "Tori (CEI-Atlanta-CON)",
+                "Login": "tori.palmer@coxinc.com",
+                "FullName": "Palmer, Tori (CEI-Atlanta-CON)"
+            },
+            "Creator": {
+                "ResourceType": "GeneralUser",
+                "Id": 542,
+                "FirstName": "Palmer,",
+                "LastName": "Tori (CEI-Atlanta-CON)",
+                "Login": "tori.palmer@coxinc.com",
+                "FullName": "Palmer, Tori (CEI-Atlanta-CON)"
+            },
+            "LastCommentedUser": null,
+            "Project": {
+                "ResourceType": "Project",
+                "Id": 1001,
+                "Name": "Finance and Supply Chain",
+                "Process": {
+                    "ResourceType": "Process",
+                    "Id": 1
+                }
+            },
+            "LinkedTestPlan": null,
+            "Milestone": null,
+            "Effort": 0.0000,
+            "EffortCompleted": 0.0000,
+            "EffortToDo": 0.0000,
+            "Progress": 0.0000,
+            "TimeSpent": 0.0000,
+            "TimeRemain": 0.0000,
+            "LastStateChangeDate": "/Date(1712667920000-0400)/",
+            "PlannedStartDate": null,
+            "PlannedEndDate": null,
+            "Units": "pt",
+            "Release": null,
+            "Iteration": null,
+            "TeamIteration": null,
+            "Team": null,
+            "Priority": {
+                "ResourceType": "Priority",
+                "Id": 5,
+                "Name": "Low",
+                "Importance": 5
+            },
+            "EntityState": {
+                "ResourceType": "EntityState",
+                "Id": 1,
+                "Name": "Make Ready",
+                "NumericPriority": 1.0
+            },
+            "ResponsibleTeam": null,
+            "InitialEstimate": 0.0000,
+            "Feature": null,
+            "Build": null,
+            "CustomFields": [
+                {
+                    "Name": "Class of Service",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Points",
+                    "Type": "DropDown",
+                    "Value": "0"
+                },
+                {
+                    "Name": "Canceled",
+                    "Type": "CheckBox",
+                    "Value": false
+                },
+                {
+                    "Name": "Date When Moved to Make Ready",
+                    "Type": "Date",
+                    "Value": "/Date(1712635200000-0400)/"
+                },
+                {
+                    "Name": "Date When Moved to Ready",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "Date When Moved to In Progress",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "Date When Moved to Done",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "Date When Moved to Accepted",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "Acceptance Criteria",
+                    "Type": "RichText",
+                    "Value": "(Given) some context<br>(When) some action is carried out<br>(Then) a particular set of observable and testable outcomes<br>"
+                },
+                {
+                    "Name": "Notes",
+                    "Type": "RichText",
+                    "Value": null
+                },
+                {
+                    "Name": "Ready",
+                    "Type": "CheckBox",
+                    "Value": false
+                },
+                {
+                    "Name": "Type",
+                    "Type": "DropDown",
+                    "Value": "User Story"
+                },
+                {
+                    "Name": "Feature WSJF",
+                    "Type": "Number",
+                    "Value": null
+                },
+                {
+                    "Name": "Severity",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Epic WSJF",
+                    "Type": "Number",
+                    "Value": null
+                },
+                {
+                    "Name": "Change or Training Impact",
+                    "Type": "CheckBox",
+                    "Value": false
+                },
+                {
+                    "Name": "End User Impact",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Change Interventions",
+                    "Type": "RichText",
+                    "Value": null
+                },
+                {
+                    "Name": "Impacted Divisions",
+                    "Type": "MultipleSelectionList",
+                    "Value": null
+                },
+                {
+                    "Name": "On Hold",
+                    "Type": "CheckBox",
+                    "Value": false
+                },
+                {
+                    "Name": "Status",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Analysis",
+                    "Type": "RichText",
+                    "Value": null
+                },
+                {
+                    "Name": "Technical Solution",
+                    "Type": "RichText",
+                    "Value": null
+                },
+                {
+                    "Name": "Integrations Impacted",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "Type of Change",
+                    "Type": "MultipleSelectionList",
+                    "Value": null
+                },
+                {
+                    "Name": "Tenants Used for Testing",
+                    "Type": "MultipleSelectionList",
+                    "Value": null
+                },
+                {
+                    "Name": "Impacted Area",
+                    "Type": "MultipleSelectionList",
+                    "Value": null
+                },
+                {
+                    "Name": "Target Release Date",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "ServiceNow Ticket",
+                    "Type": "CheckBox",
+                    "Value": false
+                },
+                {
+                    "Name": "LastTeamStateChangeDate",
+                    "Type": "Date",
+                    "Value": null
+                },
+                {
+                    "Name": "LastTeamStateChangeTime",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "Epic Project Code",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "qTest Module",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "Environment",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Category",
+                    "Type": "DropDown",
+                    "Value": null
+                },
+                {
+                    "Name": "Estimated Task Hours",
+                    "Type": "Number",
+                    "Value": 0.00
+                },
+                {
+                    "Name": "Remaining Task Hours",
+                    "Type": "Number",
+                    "Value": 0.00
+                },
+                {
+                    "Name": "ServiceNow Number",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "ServiceNow Requested By",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "ServiceNow Requested For",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "ServiceNow Request Type",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "ServiceNow Company",
+                    "Type": "Text",
+                    "Value": null
+                },
+                {
+                    "Name": "Aging (Days)",
+                    "Type": "Number",
+                    "Value": null
+                }
+            ]
+        }
+    ]
+}
