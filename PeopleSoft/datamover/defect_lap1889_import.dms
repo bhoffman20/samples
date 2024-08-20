@@ -1,0 +1,5 @@
+
+SET LOG /nonsense/path/logs/Defect_JIRA_1889.log
+
+SET INPUT /nonsense/path/mydatamover/Defect_JIRA_1889.dat
+
