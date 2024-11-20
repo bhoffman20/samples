@@ -1,8 +1,7 @@
-- project: BenXXHR
-  packages:
-    - package: environment
-      type: dynamic
-      include_path: (/TestFile.txt|/datafiles/ZFile.txt|/import/.*)
-      config_directory: root/environment
-      config_schema: root/schema.json
+packages:
+  - package: environment
+    type: dynamic
+    include_path: (/TestFile.txt|/datafiles/ZFile.txt|/import/.*)
+    config_directory: root/environment
+    config_schema: root/schema.json
 
