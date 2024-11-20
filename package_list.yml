@@ -1,7 +1,10 @@
-packages:
-  - package: environment
-    type: dynamic
-    include_path: (/TestFile.txt|/datafiles/ZFile.txt|/import/.*)
-    config_directory: root/environment
-    config_schema: root/schema.json
-
+- package: environment
+  type: dynamic
+  include_path: (/TestFile.txt|/datafiles/ZFile.txt|/import/.*)
+  config_directory: root/environment
+  config_schema: root/schema.json
+- package: second
+  type: dynamic
+  include_path: (/sql/.*)
+  config_directory: root/environment
+  config_schema: root/schema.json
