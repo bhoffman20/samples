@@ -1,0 +1,1 @@
+[{"connectionProperties":[],"securityProperties":[],"privateEndpoint":false,"id":"MY_REST_ENDPOINT_INTERFAC","securityPolicy":"MULTI_TOKEN_INBOUND","adapterType":{"displayName":"REST","name":"rest","links":[],"type":"PREINSTALLED"}}]
