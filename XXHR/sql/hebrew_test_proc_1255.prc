@@ -6,5 +6,5 @@ begin
   dbms_output.put_line('ÿÿÿÿ ÿÿÿÿÿÿ ÿÿÿÿ ÿÿÿÿ');
   
    dbms_output.put_line('ÿÿÿÿ ÿÿÿÿÿÿ ÿÿÿÿ ÿÿÿÿ');
-end mcil_hebrew_test_proc;
+end mcil_hebrew_test_proc_1255;
 /
