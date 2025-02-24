@@ -7,7 +7,7 @@
 --      Version             :           2.0
 -- ==========================================================================
 
-CREATE or REPLACE procedure FD_ADMIN.ben_sample_proc_with_comment AS
+CREATE or REPLACE procedure ben_sample_proc_with_comment AS
 /*
 -create tblReportIndiv, the basis of the Indiv commiss. stmt
 -if it is the current month save the id commission to tblindivrelations
