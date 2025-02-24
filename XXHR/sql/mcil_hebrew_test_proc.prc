@@ -1,10 +1,10 @@
-ο»Ώcreate or replace procedure mcil_hebrew_test_proc as
+create or replace procedure mcil_hebrew_test_proc as
 begin
-  dbms_output.put_line('Χ©ΧΧ•Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧªΧΧ™Χ“ Χ Χ—ΧΧ“');
-  dbms_output.put_line('Χ©ΧΧ•Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧªΧΧ™Χ“ Χ Χ—ΧΧ“');
- dbms_output.put_line('Χ©ΧΧ•Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧªΧΧ™Χ“ Χ Χ—ΧΧ“');
-  dbms_output.put_line('Χ©ΧΧ•Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧªΧΧ™Χ“ Χ Χ—ΧΧ“');
+  dbms_output.put_line('ωμεν αςαψιϊ ϊξιγ πηξγ');
+  dbms_output.put_line('ωμεν αςαψιϊ ϊξιγ πηξγ');
+ dbms_output.put_line('ωμεν αςαψιϊ ϊξιγ πηξγ');
+  dbms_output.put_line('ωμεν αςαψιϊ ϊξιγ πηξγ');
   
-   dbms_output.put_line('Χ©ΧΧ•Χ Χ‘ΧΆΧ‘Χ¨Χ™Χª ΧªΧΧ™Χ“ Χ Χ—ΧΧ“');
+   dbms_output.put_line('ωμεν αςαψιϊ ϊξιγ πηξγ');
 end mcil_hebrew_test_proc;
 /
