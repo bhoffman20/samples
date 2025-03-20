@@ -29,18 +29,18 @@
             "Owner": {
                 "ResourceType": "GeneralUser",
                 "Id": 542,
-                "FirstName": "Palmer,",
-                "LastName": "Tori (CEI-Atlanta-CON)",
-                "Login": "tori.palmer@coxinc.com",
-                "FullName": "Palmer, Tori (CEI-Atlanta-CON)"
+                "FirstName": "Ben",
+                "LastName": "Hoffman",
+                "Login": "ben.hoffman@flexagon.com",
+                "FullName": "Ben Hoffman"
             },
             "Creator": {
                 "ResourceType": "GeneralUser",
                 "Id": 542,
-                "FirstName": "Palmer,",
-                "LastName": "Tori (CEI-Atlanta-CON)",
-                "Login": "tori.palmer@coxinc.com",
-                "FullName": "Palmer, Tori (CEI-Atlanta-CON)"
+                "FirstName": "Ben",
+                "LastName": "Hoffman",
+                "Login": "ben.hoffman@flexagon.com",
+                "FullName": "Ben Hoffman"
             },
             "LastCommentedUser": null,
             "Project": {
