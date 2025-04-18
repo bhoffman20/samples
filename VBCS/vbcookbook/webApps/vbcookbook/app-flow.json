@@ -1,0 +1,164 @@
+{
+  "id": "vbcookbook",
+  "description": "VB Cookbook",
+  "defaultPage": "shell",
+  "chains": {},
+  "services": {},
+  "translations": {
+    "app": {
+      "path": "./resources/strings/app/nls/app-strings"
+    }
+  },
+  "events": {
+    "navigateToItem": {
+      "payloadType": {
+        "item": "string"
+      }
+    },
+    "navMenuVisible": {
+      "payloadType": {
+        "visible": "boolean"
+      }
+    }
+  },
+  "types": {},
+  "variables": {
+    "isThisVBDesigner": {
+      "type": "boolean",
+      "defaultValue": "{{ window.vbInitConfig.RUNTIME_ENV_CLASS === 'vbdt/preview-core/rt/DtRuntimeEnvironment' || $application.variables.hideRecipe }}",
+      "description": "This is helper variable which is used to hide some content when VB Cookbook is opened in VB Design Time. The purpose is to streamline working with individual recipes."
+    },
+    "hideRecipe": {
+      "type": "boolean",
+      "defaultValue": false,
+      "input": "fromUrl",
+      "description": "This can be set to true on URL to force VB Cookbook to behave as if it was opened in VB Designer, that is rendering without recipes subflow. It is used from functional tests execution as vb-webdriver Expectation has issues with testing pages with subflow"
+    },
+    "navMenuVisible": {
+      "type": "boolean",
+      "defaultValue": true
+    }
+  },
+  "userConfig": {
+    "type": "vb/DefaultSecurityProvider",
+    "configuration": {},
+    "embedding": "deny"
+  },
+  "security": {
+    "access": {
+      "requiresAuthentication": false
+    }
+  },
+  "localization": {
+    "locale": "{{ window.localStorage.getItem('vbcs.languageSwitcherApplication.locale') || 'en' }}"
+  },
+  "requirejs": {
+    "paths": {
+      "oj-dynamic": "https://static.oracle.com/cdn/jet/packs/oj-dynamic/10.1.1/min/",
+      "oj-sample": "https://static.oracle.com/cdn/jet/packs/oj-sample/4.0.5/min",
+      "employee-card": "resources/components/employee-card"
+    },
+    "bundles": {
+      "oj-dynamic/all-bundle": [
+        "oj-dynamic/bind-field/loader",
+        "oj-dynamic/bind-section/loader",
+        "oj-dynamic/container/loader",
+        "oj-dynamic/form/loader",
+        "oj-dynamic/table/loader",
+        "oj-dynamic/table/resources/nls",
+        "oj-dynamic/form/resources/nls",
+        "oj-dynamic/providers/MetadataProviderFactory",
+        "oj-dynamic/providers/TransformState",
+        "oj-dynamic/providers/MetadataUtils",
+        "oj-dynamic/providers/MetadataContentManager",
+        "oj-dynamic/providers/MetadataTransformer",
+        "oj-dynamic/providers/AdfBCExtension",
+        "oj-dynamic/providers/DefaultFetchable",
+        "oj-dynamic/providers/DynamicLayoutEngine",
+        "oj-dynamic/providers/MetadataProviderManager",
+        "oj-dynamic/providers/JsonMetadataProvider",
+        "oj-dynamic/providers/ServiceMetadataProvider",
+        "oj-dynamic/providers/DynamicLayoutProvider",
+        "oj-dynamic/providers/DynamicLayoutMetadataProvider",
+        "oj-dynamic/providers/DynamicLayoutMetadataProviderFactory",
+        "oj-dynamic/providers/Extension",
+        "oj-dynamic/providers/Fetchable",
+        "oj-dynamic/providers/JsonMetadataProviderFactory",
+        "oj-dynamic/providers/JsonMetadataSchema",
+        "oj-dynamic/providers/OpenAPISchema",
+        "oj-dynamic/providers/ServiceFetchable",
+        "oj-dynamic/providers/ServiceMetadataProviderFactory",
+        "oj-dynamic/providers/ContainerMetadataProviderFactory",
+        "oj-dynamic/shared/CommonUtils",
+        "oj-dynamic/shared/DynamicComponentUtil",
+        "oj-dynamic/shared/DataProviderFactory",
+        "oj-dynamic/shared/UriTemplateUtils",
+        "oj-dynamic/shared/DefaultRestDataProvider",
+        "oj-dynamic/shared/DataProviderFactoryManager",
+        "oj-dynamic/shared/DynamicInputContacts",
+        "oj-dynamic/shared/DynamicLOVUtil",
+        "oj-dynamic/shared/DynamicInputRegistry",
+        "oj-dynamic/shared/DynamicInputFactory",
+        "oj-dynamic/shared/DynamicUIMetadata",
+        "oj-dynamic/shared/MetadataProvider",
+        "oj-dynamic/shared/polyfills",
+        "oj-dynamic/shared/MicroTaskQueue",
+        "oj-dynamic/shared/UtilTypes"
+      ],
+      "oj-sample/calendar-bundle": [
+        "oj-sample/calendar/loader",
+        "oj-sample/calendar-event/loader",
+        "oj-sample/calendar-provider/loader"
+      ],
+      "oj-sample/controls-bundle": [
+        "oj-sample/checkbox-switch/loader",
+        "oj-sample/copy-text/loader",
+        "oj-sample/country-picker/loader",
+        "oj-sample/export-data/loader",
+        "oj-sample/highlight-text/loader",
+        "oj-sample/input-email/loader",
+        "oj-sample/input-text-typeahead/loader",
+        "oj-sample/input-url/loader",
+        "oj-sample/metric/loader",
+        "oj-sample/organization-tree/loader",
+        "oj-sample/organization-tree-item/loader",
+        "oj-sample/qr-code/loader",
+        "oj-sample/tooltip/loader",
+        "oj-sample/utils/validators/emailValidatorFactory",
+        "oj-sample/utils/validators/urlValidatorFactory",
+        "oj-sample/utils/validators/countryValidatorFactory",
+        "oj-sample/utils/export/dataCollectionExporter",
+        "oj-sample/utils/export/visualizationExporter",
+        "oj-sample/visualization-exporter/loader"
+      ],
+      "oj-sample/layout-bundle": [
+        "oj-sample/drawer/loader",
+        "oj-sample/flip-card/loader",
+        "oj-sample/online-detector/loader",
+        "oj-sample/orientation-detector/loader",
+        "oj-sample/pull-to-refresh/loader",
+        "oj-sample/show-when-ready/loader",
+        "oj-sample/timed-event/loader"
+      ]
+    }
+  },
+  "eventListeners": {
+    "navMenuVisible": {
+      "chains": [
+        {
+          "chainId": "updateNavMenuVisibility",
+          "parameters": {
+            "event": "{{ $event }}"
+          }
+        }
+      ]
+    }
+  },
+  "routerStrategy": "query",
+  "imports": {
+    "css": [
+      "https://static.oracle.com/cdn/fnd/gallery/2107.2.0/images/iconfont/ojuxIconFont.min.css",
+      "https://static.oracle.com/cdn/vb/vb-icon-font/1/vb-icon-font.css"
+    ]
+  }
+}
