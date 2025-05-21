@@ -198,3 +198,5 @@ echo 'Schema Update Script: /home/xxxxx/updSchema/xxxxx.250505.214686.sql'
 echo 'Schema Update Log:    /home/xxxxx/updSchema/xxxxx.250505.214686.log'
 echo ''
 echo ''
+
+exit 2
