@@ -1,0 +1,5 @@
+set verify off
+SET SERVEROUTPUT ON
+WHENEVER SQLERROR EXIT SQL.SQLCODE
+
+@script1.sql
