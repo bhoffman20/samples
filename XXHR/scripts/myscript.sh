@@ -1,6 +1,13 @@
 #!/bin/bash
-echo "$XXHR_TOP"
-cd "$XXHR_TOP/mds/"
-ls -ltra
+echo "XXHR_TOP: $XXHR_TOP"
+cd "$XXHR_TOP/mds"
 
-unzip -o zipped_files.zip
+echo "Working directory: $(pwd)"
+ls -ltra
+echo ""
+
+echo "unzipping zipped_files.zip"
+unzip -o -q zipped_files.zip
+echo ""
+
+ls -ltra
